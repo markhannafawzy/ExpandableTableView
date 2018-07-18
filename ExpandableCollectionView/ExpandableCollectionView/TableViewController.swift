@@ -13,6 +13,16 @@ class GenreCell: UITableViewCell {
     func setCollectionViewTag(section: Int){
         self.collectionView.tag = section
     }
+    
+    var collectionViewOffset: CGFloat {
+        get {
+            return collectionView.contentOffset.x
+        }
+        
+        set {
+            collectionView.contentOffset.x = newValue
+        }
+    }
 }
 
 class MovieCell: UICollectionViewCell {
@@ -37,6 +47,8 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
                     Section(genre: "SuperHero", movieImageNames: ["the " , "the scsdsd"], expanded: false),
                     Section(genre: "Horror", movieImageNames: ["tlion" , "the is"], expanded: false)
     ]
+    
+    var storedOffsets = [Int: CGFloat]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -86,7 +98,12 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
         return header
     }
     
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? GenreCell else { return }
+        
+        tableViewCell.collectionViewOffset = storedOffsets[indexPath.section] ?? 0
+        
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "genre", for: indexPath) as! GenreCell
@@ -98,7 +115,11 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let tableViewCell = cell as? GenreCell else { return }
+        storedOffsets[indexPath.section] = tableViewCell.collectionViewOffset
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
