@@ -10,12 +10,14 @@ import UIKit
 
 class GenreCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    func setCollectionViewTag(section: Int){
+        self.collectionView.tag = section
+    }
 }
 
 class MovieCell: UICollectionViewCell {
     @IBOutlet weak var movieImage: UIImageView!
-    @IBOutlet weak var movieLabel: UILabel!
+    //@IBOutlet weak var movieLabel: UILabel!
 }
 
 class TableViewController: UITableViewController , UICollectionViewDelegate , UICollectionViewDataSource ,ExpandableHeaderViewDelegate{
@@ -31,7 +33,7 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     }
     
     
-    var sections = [Section(genre: "Animation", movieImageNames: ["the lion" , "the incredibles"], expanded: false),
+    var sections = [Section(genre: "Animation", movieImageNames: ["the lion" , "the incredibles","toy story1" , "zootopia" , "bugs bany"], expanded: false),
                     Section(genre: "SuperHero", movieImageNames: ["the " , "the scsdsd"], expanded: false),
                     Section(genre: "Horror", movieImageNames: ["tlion" , "the is"], expanded: false)
     ]
@@ -42,6 +44,8 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        tableView.estimatedRowHeight = tableView.rowHeight
+//        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,6 +90,7 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "genre", for: indexPath) as! GenreCell
+        cell.setCollectionViewTag(section: indexPath.section)
         cell.collectionView.reloadData()
 
         // Configure the cell...
@@ -148,17 +153,18 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return sections[section].movieImageNames.count
+        return sections[collectionView.tag].movieImageNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movie", for: indexPath) as! MovieCell
         cell.movieImage.image = UIImage(named: "toyStory.jpg")
-        cell.movieLabel.text = sections[indexPath.section].movieImageNames[indexPath.row]
+        //cell.movieLabel.text = sections[indexPath.section].movieImageNames[indexPath.row]
         // Configure the cell
         
         return cell
     }
+    
     
     // MARK: UICollectionViewDelegate
     
