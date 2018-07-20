@@ -7,22 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D56393A2100C100003D222D /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5639392100C100003D222D /* db.json */; };
+		4D67F0BE21024095000E2049 /* UIImageView+downloadImageFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67F0BD21024095000E2049 /* UIImageView+downloadImageFunctions.swift */; };
+		4D67F0C02102412B000E2049 /* TableViewController+CollectionViewDataSourceFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67F0BF2102412B000E2049 /* TableViewController+CollectionViewDataSourceFunctions.swift */; };
+		4D67F0C221025177000E2049 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67F0C121025177000E2049 /* GenreCell.swift */; };
+		4D67F0C4210251BD000E2049 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67F0C3210251BD000E2049 /* MovieCell.swift */; };
+		4D746A0620FFD5DD00DB8AF3 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D746A0520FFD5DD00DB8AF3 /* MovieList.swift */; };
+		4D746A0820FFD6A800DB8AF3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D746A0720FFD6A800DB8AF3 /* Movie.swift */; };
 		4D9C034620FA59D100B167D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C034520FA59D100B167D9 /* AppDelegate.swift */; };
 		4D9C034B20FA59D100B167D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C034920FA59D100B167D9 /* Main.storyboard */; };
 		4D9C034E20FA59D100B167D9 /* ExpandableCollectionView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C034C20FA59D100B167D9 /* ExpandableCollectionView.xcdatamodeld */; };
 		4D9C035020FA59DF00B167D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C034F20FA59DF00B167D9 /* Assets.xcassets */; };
 		4D9C035320FA59DF00B167D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C035120FA59DF00B167D9 /* LaunchScreen.storyboard */; };
-		4D9C036020FA60FE00B167D9 /* prideAndprijudice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C035C20FA60FD00B167D9 /* prideAndprijudice.jpg */; };
-		4D9C036120FA60FE00B167D9 /* man-of-steel-poster-henry-cavill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C035D20FA60FE00B167D9 /* man-of-steel-poster-henry-cavill.jpg */; };
-		4D9C036220FA60FE00B167D9 /* toyStory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C035E20FA60FE00B167D9 /* toyStory.jpg */; };
-		4D9C036320FA60FE00B167D9 /* Zootopia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C035F20FA60FE00B167D9 /* Zootopia.jpg */; };
-		4D9C036520FA611800B167D9 /* darkKnightRises.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C036420FA611800B167D9 /* darkKnightRises.jpg */; };
 		4D9C036920FA82E100B167D9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C036820FA82E100B167D9 /* Section.swift */; };
 		4D9C036B20FAB81300B167D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C036A20FAB81300B167D9 /* TableViewController.swift */; };
 		4D9C036D20FABE3800B167D9 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C036C20FABE3800B167D9 /* ExpandableHeaderView.swift */; };
+		4DC7145620FFE28D00B3646A /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7145520FFE28D00B3646A /* MoviesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D5639392100C100003D222D /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
+		4D67F0BD21024095000E2049 /* UIImageView+downloadImageFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadImageFunctions.swift"; sourceTree = "<group>"; };
+		4D67F0BF2102412B000E2049 /* TableViewController+CollectionViewDataSourceFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+CollectionViewDataSourceFunctions.swift"; sourceTree = "<group>"; };
+		4D67F0C121025177000E2049 /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
+		4D67F0C3210251BD000E2049 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4D746A0520FFD5DD00DB8AF3 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		4D746A0720FFD6A800DB8AF3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4D9C034220FA59D100B167D9 /* ExpandableCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandableCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9C034520FA59D100B167D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D9C034A20FA59D100B167D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,14 +40,10 @@
 		4D9C034F20FA59DF00B167D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9C035220FA59DF00B167D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D9C035420FA59DF00B167D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D9C035C20FA60FD00B167D9 /* prideAndprijudice.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prideAndprijudice.jpg; sourceTree = "<group>"; };
-		4D9C035D20FA60FE00B167D9 /* man-of-steel-poster-henry-cavill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "man-of-steel-poster-henry-cavill.jpg"; sourceTree = "<group>"; };
-		4D9C035E20FA60FE00B167D9 /* toyStory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = toyStory.jpg; sourceTree = "<group>"; };
-		4D9C035F20FA60FE00B167D9 /* Zootopia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zootopia.jpg; sourceTree = "<group>"; };
-		4D9C036420FA611800B167D9 /* darkKnightRises.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darkKnightRises.jpg; sourceTree = "<group>"; };
 		4D9C036820FA82E100B167D9 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4D9C036A20FAB81300B167D9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4D9C036C20FABE3800B167D9 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4DC7145520FFE28D00B3646A /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,14 +57,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D67F0C521025203000E2049 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C036A20FAB81300B167D9 /* TableViewController.swift */,
+				4D67F0BF2102412B000E2049 /* TableViewController+CollectionViewDataSourceFunctions.swift */,
+				4D67F0BD21024095000E2049 /* UIImageView+downloadImageFunctions.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D67F0C621025210000E2049 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D67F0C3210251BD000E2049 /* MovieCell.swift */,
+				4D67F0C121025177000E2049 /* GenreCell.swift */,
+				4D9C036C20FABE3800B167D9 /* ExpandableHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D67F0C721025289000E2049 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C034920FA59D100B167D9 /* Main.storyboard */,
+				4D9C035120FA59DF00B167D9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D746A0420FFD5AA00DB8AF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D5639392100C100003D222D /* db.json */,
+				4D9C036820FA82E100B167D9 /* Section.swift */,
+				4D746A0520FFD5DD00DB8AF3 /* MovieList.swift */,
+				4D746A0720FFD6A800DB8AF3 /* Movie.swift */,
+				4DC7145520FFE28D00B3646A /* MoviesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4D9C033920FA59D100B167D9 = {
 			isa = PBXGroup;
 			children = (
-				4D9C036420FA611800B167D9 /* darkKnightRises.jpg */,
-				4D9C035D20FA60FE00B167D9 /* man-of-steel-poster-henry-cavill.jpg */,
-				4D9C035C20FA60FD00B167D9 /* prideAndprijudice.jpg */,
-				4D9C035E20FA60FE00B167D9 /* toyStory.jpg */,
-				4D9C035F20FA60FE00B167D9 /* Zootopia.jpg */,
 				4D9C034420FA59D100B167D9 /* ExpandableCollectionView */,
 				4D9C034320FA59D100B167D9 /* Products */,
 			);
@@ -75,15 +117,14 @@
 		4D9C034420FA59D100B167D9 /* ExpandableCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				4D67F0C721025289000E2049 /* Storyboards */,
+				4D67F0C621025210000E2049 /* Views */,
+				4D67F0C521025203000E2049 /* ViewControllers */,
+				4D746A0420FFD5AA00DB8AF3 /* Model */,
 				4D9C034520FA59D100B167D9 /* AppDelegate.swift */,
-				4D9C034920FA59D100B167D9 /* Main.storyboard */,
 				4D9C034F20FA59DF00B167D9 /* Assets.xcassets */,
-				4D9C035120FA59DF00B167D9 /* LaunchScreen.storyboard */,
 				4D9C035420FA59DF00B167D9 /* Info.plist */,
 				4D9C034C20FA59D100B167D9 /* ExpandableCollectionView.xcdatamodeld */,
-				4D9C036820FA82E100B167D9 /* Section.swift */,
-				4D9C036A20FAB81300B167D9 /* TableViewController.swift */,
-				4D9C036C20FABE3800B167D9 /* ExpandableHeaderView.swift */,
 			);
 			path = ExpandableCollectionView;
 			sourceTree = "<group>";
@@ -146,14 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9C036220FA60FE00B167D9 /* toyStory.jpg in Resources */,
-				4D9C036320FA60FE00B167D9 /* Zootopia.jpg in Resources */,
 				4D9C035320FA59DF00B167D9 /* LaunchScreen.storyboard in Resources */,
 				4D9C035020FA59DF00B167D9 /* Assets.xcassets in Resources */,
-				4D9C036020FA60FE00B167D9 /* prideAndprijudice.jpg in Resources */,
 				4D9C034B20FA59D100B167D9 /* Main.storyboard in Resources */,
-				4D9C036120FA60FE00B167D9 /* man-of-steel-poster-henry-cavill.jpg in Resources */,
-				4D9C036520FA611800B167D9 /* darkKnightRises.jpg in Resources */,
+				4D56393A2100C100003D222D /* db.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,9 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC7145620FFE28D00B3646A /* MoviesModel.swift in Sources */,
+				4D746A0820FFD6A800DB8AF3 /* Movie.swift in Sources */,
+				4D67F0C4210251BD000E2049 /* MovieCell.swift in Sources */,
+				4D67F0BE21024095000E2049 /* UIImageView+downloadImageFunctions.swift in Sources */,
+				4D67F0C02102412B000E2049 /* TableViewController+CollectionViewDataSourceFunctions.swift in Sources */,
+				4D746A0620FFD5DD00DB8AF3 /* MovieList.swift in Sources */,
 				4D9C036920FA82E100B167D9 /* Section.swift in Sources */,
 				4D9C036D20FABE3800B167D9 /* ExpandableHeaderView.swift in Sources */,
 				4D9C036B20FAB81300B167D9 /* TableViewController.swift in Sources */,
+				4D67F0C221025177000E2049 /* GenreCell.swift in Sources */,
 				4D9C034620FA59D100B167D9 /* AppDelegate.swift in Sources */,
 				4D9C034E20FA59D100B167D9 /* ExpandableCollectionView.xcdatamodeld in Sources */,
 			);

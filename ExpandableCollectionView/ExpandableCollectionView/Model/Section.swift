@@ -7,16 +7,14 @@
 //
 
 import Foundation
-struct Section{
+class Section{
     var genre : String
-    var movieImageNames : [String]
+    var movies : [Movie]
     var expanded : Bool
-    init(genre: String , movieImageNames: [String] , expanded: Bool) {
+    init(genre: String , expanded: Bool) {
         self.genre = genre
-        self.movieImageNames = movieImageNames
+        self.movies = [Movie]()
         self.expanded = expanded
     }
 }
-struct Movie {
-    var title: String?
-}
+

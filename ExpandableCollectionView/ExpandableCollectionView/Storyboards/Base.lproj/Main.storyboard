@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jga-1k-FjP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHb-CP-ED6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Movies-->
         <scene sceneID="X9V-2B-MpX">
             <objects>
                 <tableViewController id="jga-1k-FjP" customClass="TableViewController" customModule="ExpandableCollectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,8 +26,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-Am-7m5">
-                                            <rect key="frame" x="0.0" y="0.0" width="377" height="111"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-Am-7m5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="111" id="ccB-40-veX"/>
@@ -46,20 +46,45 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="101" height="109"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zootopia.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ji2-RX-gph">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zootopia" translatesAutoresizingMaskIntoConstraints="NO" id="ji2-RX-gph">
                                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="109"/>
                                                             </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-oq-8dR">
+                                                                <rect key="frame" x="0.0" y="74" width="101" height="35"/>
+                                                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="mZp-As-QxH"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-yV-KRU">
+                                                                <rect key="frame" x="0.0" y="74" width="101" height="35"/>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="ji2-RX-gph" secondAttribute="bottom" id="6AJ-l9-tXa"/>
+                                                        <constraint firstItem="SPh-yV-KRU" firstAttribute="top" secondItem="cGH-oq-8dR" secondAttribute="top" id="6Yh-wc-EhI"/>
+                                                        <constraint firstItem="SPh-yV-KRU" firstAttribute="trailing" secondItem="cGH-oq-8dR" secondAttribute="trailing" id="Dgd-Zi-Emd"/>
                                                         <constraint firstItem="ji2-RX-gph" firstAttribute="top" secondItem="gco-rI-0Xt" secondAttribute="top" id="H42-GV-6Vb"/>
                                                         <constraint firstItem="ji2-RX-gph" firstAttribute="leading" secondItem="gco-rI-0Xt" secondAttribute="leading" id="WQr-Bg-flB"/>
                                                         <constraint firstAttribute="trailing" secondItem="ji2-RX-gph" secondAttribute="trailing" id="d1J-ee-QJd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cGH-oq-8dR" secondAttribute="trailing" id="daf-ib-1Js"/>
+                                                        <constraint firstItem="SPh-yV-KRU" firstAttribute="leading" secondItem="cGH-oq-8dR" secondAttribute="leading" id="g5R-9R-WLw"/>
+                                                        <constraint firstItem="cGH-oq-8dR" firstAttribute="leading" secondItem="gco-rI-0Xt" secondAttribute="leading" id="hUX-hK-VkW"/>
                                                         <constraint firstItem="ji2-RX-gph" firstAttribute="width" secondItem="gco-rI-0Xt" secondAttribute="height" multiplier="101:109" id="ixu-OK-spU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cGH-oq-8dR" secondAttribute="bottom" id="m4R-pX-igg"/>
+                                                        <constraint firstItem="cGH-oq-8dR" firstAttribute="width" secondItem="gco-rI-0Xt" secondAttribute="height" multiplier="101:109" id="nDW-Oh-1Q2"/>
+                                                        <constraint firstItem="SPh-yV-KRU" firstAttribute="bottom" secondItem="cGH-oq-8dR" secondAttribute="bottom" id="wmR-5n-Nv9"/>
                                                     </constraints>
                                                     <connections>
                                                         <outlet property="movieImage" destination="ji2-RX-gph" id="l1v-MB-hM0"/>
+                                                        <outlet property="movieLabel" destination="SPh-yV-KRU" id="EcA-Zh-bdF"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -73,7 +98,6 @@
                                         <constraint firstItem="2e7-Am-7m5" firstAttribute="top" secondItem="M1R-WC-UDZ" secondAttribute="top" id="5eR-if-Xg9"/>
                                         <constraint firstAttribute="trailing" secondItem="2e7-Am-7m5" secondAttribute="trailing" id="PP5-wW-zIB"/>
                                         <constraint firstAttribute="bottom" secondItem="2e7-Am-7m5" secondAttribute="bottom" id="VE1-jU-CVP"/>
-                                        <constraint firstItem="2e7-Am-7m5" firstAttribute="width" secondItem="M1R-WC-UDZ" secondAttribute="height" multiplier="75:22" id="cum-3A-Ku4"/>
                                         <constraint firstItem="2e7-Am-7m5" firstAttribute="leading" secondItem="M1R-WC-UDZ" secondAttribute="leading" id="oJg-HL-MgV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -87,13 +111,32 @@
                             <outlet property="delegate" destination="jga-1k-FjP" id="NXV-Jh-Iqm"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="Pdz-1D-1qO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ei-ct-c2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mra-Hv-0F2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHb-CP-ED6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4qa-Qc-e3M">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jga-1k-FjP" kind="relationship" relationship="rootViewController" id="8SP-8n-hh5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kz-zC-10T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="276" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Zootopia.jpg" width="220" height="326"/>
+        <image name="zootopia" width="220" height="326"/>
     </resources>
 </document>

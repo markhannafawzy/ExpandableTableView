@@ -8,31 +8,9 @@
 
 import UIKit
 
-class GenreCell: UITableViewCell {
-    @IBOutlet weak var collectionView: UICollectionView!
-    func setCollectionViewTag(section: Int){
-        self.collectionView.tag = section
-    }
-    
-    var collectionViewOffset: CGFloat {
-        get {
-            return collectionView.contentOffset.x
-        }
-        
-        set {
-            collectionView.contentOffset.x = newValue
-        }
-    }
-}
-
-class MovieCell: UICollectionViewCell {
-    @IBOutlet weak var movieImage: UIImageView!
-    //@IBOutlet weak var movieLabel: UILabel!
-}
-
-class TableViewController: UITableViewController , UICollectionViewDelegate , UICollectionViewDataSource ,ExpandableHeaderViewDelegate{
+class TableViewController: UITableViewController ,ExpandableHeaderViewDelegate{
     func toggleSection(header: ExpandableHeaderView, section: Int) {
-        sections[section].expanded = !sections[section].expanded
+        sections![section].expanded = !sections![section].expanded
         
         tableView.beginUpdates()
         for i in 0..<1
@@ -43,12 +21,14 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     }
     
     
-    var sections = [Section(genre: "Animation", movieImageNames: ["the lion" , "the incredibles","toy story1" , "zootopia" , "bugs bany"], expanded: false),
-                    Section(genre: "SuperHero", movieImageNames: ["the " , "the scsdsd"], expanded: false),
-                    Section(genre: "Horror", movieImageNames: ["tlion" , "the is"], expanded: false)
-    ]
-    
+//    var sections = [Section(genre: "Animation", expanded: false),
+//                    Section(genre: "SuperHero", expanded: false),
+//                    Section(genre: "Horror", expanded: false)
+//    ]
+    var sections: [Section]?
     var storedOffsets = [Int: CGFloat]()
+    var moviesModel: MoviesModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -58,6 +38,8 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 //        tableView.estimatedRowHeight = tableView.rowHeight
 //        tableView.rowHeight = UITableViewAutomaticDimension
+        moviesModel = MoviesModel()
+        sections = moviesModel?.moviesSectionedByGenre()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +51,7 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return sections.count;
+        return sections!.count;
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +62,7 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
         return 44
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if sections[indexPath.section].expanded {
+        if sections![indexPath.section].expanded {
             return UITableViewAutomaticDimension
         }
         else{
@@ -94,7 +76,7 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandableHeaderView()
-        header.customInit(title: sections[section].genre, section: section, delegate: self)
+        header.customInit(title: sections![section].genre, section: section, delegate: self)
         return header
     }
     
@@ -165,56 +147,5 @@ class TableViewController: UITableViewController , UICollectionViewDelegate , UI
     }
     */
     
-    // MARK: UICollectionViewDataSource
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return sections[collectionView.tag].movieImageNames.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movie", for: indexPath) as! MovieCell
-        cell.movieImage.image = UIImage(named: "toyStory.jpg")
-        //cell.movieLabel.text = sections[indexPath.section].movieImageNames[indexPath.row]
-        // Configure the cell
-        
-        return cell
-    }
-    
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
+
 }
